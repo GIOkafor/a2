@@ -1,0 +1,18 @@
+/*   Forms.css   */
+.ng-valid[required], .ng-valid.required{
+  border-left:5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form){
+  border-left: 5px solid #a94442; /*red*/
+}
+
+.container{
+	border: 2px solid;
+	border-radius:10px;
+	margin-top: 20px;
+	width: 40%;
+}
+.bottom_text{
+	text-align: center;
+}
