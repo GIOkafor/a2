@@ -1,0 +1,59 @@
+<div class="header">
+	<div class="logo">
+		<span>
+			<img class="logo_text" src="app/login/img/zindustree_final_type.png">
+		</span>
+		
+		<span>
+			<img class="tree" src="app/login/img/zin_tree_final.png">
+		</span>
+	</div>
+
+	<button class="btn btn-default log_out" routerLink='/login'>
+		<span class="glyphicon glyphicon-off login_icon"></span>
+		LOG OUT
+	</button>
+</div>
+
+<div class="container industry_container">
+	<div class="row industries_row">
+		<!-- Repeat industry with loop below -->
+		<div class="col-md-4 industry" *ngFor="let industry of industries">
+			<span class="industry_image">
+				<img src="app/login/img/sauro.jpg">
+				<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+			</span>
+
+			<div class="industry_text">
+				<span>Industry:<span class="industry_span">{{industry.industryName}}</span> </span>
+				<span>Job title: <span class="jobTitle_span">{{industry.industryJobTitle}}</span></span>
+			</div>
+
+			<span class="grid_icon">
+				<img src="app/login/img/grid-three-up.png">
+			</span>
+
+			<div class="notifications">
+				<h3>Notifications</h3>
+
+				<div class="notification_items">
+					<ul>
+						<li><span class="notification_count">{{user.newFollowersCount}}</span> <span class="notification_text">New Wall Activity/new followers</span></li>
+						<li><span class="notification_count">{{user.friendRequestCount}}</span> <span class="notification_text">Friend Request</span></li>
+						<li><span class="notification_count">{{industry.projectActivityCount}}</span> <span class="notification_text">New Project Activity</span></li>
+						<li><span class="notification_count">{{industry.newGroupActivityCount}}</span> <span class="notification_text">New Group Activity</span></li>
+						<li><span class="notification_count">{{user.newMessagesCount}}</span> <span class="notification_text">New Messages</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End loop -->
+
+		<div class="col-md-4 industry">
+			<span class="industry_image">
+				<img class="new_industry" src="app/login/img/new_industry.png">
+				<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+			</span>
+		</div>
+	</div>
+</div>

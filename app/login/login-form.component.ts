@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 
-import {User} from './user';
+import {User} from '../user/user';
 
 @Component({
 	moduleId: module.id,
@@ -11,7 +11,7 @@ import {User} from './user';
 })
 
 export class LoginFormComponent {
-	user = new User('Ikechukwu', 'Okafor', 'ik4shizzle@yahoo.com', '1234', '','');
+	user = new User('Ikechukwu', 'Okafor', 'ik4shizzle@yahoo.com', '1234', '',11,4,7);
 	
 	//TODO: Extract countries and industries into service
 	countries = ['Select Country', 'CAN', 'NGA', 'USA', 'CHN'];

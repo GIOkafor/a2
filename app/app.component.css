@@ -27,15 +27,4 @@ nav a.active {
   color: #039be5;
 }
 
-.main_nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.main_nav h1{
-  font-size: 3.2em;
-}
-.login_icon{
-  top: 2.5px !important;
-  margin-right: 6px !important;
-}
+

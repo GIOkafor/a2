@@ -9,6 +9,9 @@ import {HeroService} from './hero.service';
 import {DashboardComponent} from './dashboard.component';
 
 import {LoginFormComponent} from './login/login-form.component';
+import {IndustrySelect} from './industry/industry-select.component';
+import {IndustryService} from './industry/industry.service';
+import {UserService} from './user/user.service';
 
 import {AppRoutingModule} from './app-routing.module';
 
@@ -23,9 +26,10 @@ import {AppRoutingModule} from './app-routing.module';
     DashboardComponent,
   	HeroDetailComponent,
   	HeroesComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    IndustrySelect
   ],
-  providers: [HeroService],
+  providers: [HeroService, IndustryService, UserService],
   bootstrap:    [ AppComponent ]
 })
 

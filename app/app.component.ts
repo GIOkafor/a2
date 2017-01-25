@@ -7,5 +7,10 @@ import {Component} from '@angular/core';
 })
 
 export class AppComponent{
+	isAuthenticated = false;
 
+	authenticate(){
+		console.log(this.isAuthenticated);
+		this.isAuthenticated = true;
+	}
 }
