@@ -7,14 +7,16 @@ import {HeroDetailComponent} from './hero-detail.component';
 
 import {LoginFormComponent} from './login/login-form.component';
 import {IndustrySelect} from './industry/industry-select.component';
+import {HomeScreen} from './homescreen/homescreen.component';
 
 const routes: Routes = [
-	{path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+	{path: '', redirectTo: '/login', pathMatch: 'full'},
 	{path: 'dashboard', component: DashboardComponent},
 	{path: 'detail/:id', component: HeroDetailComponent},
 	{path: 'heroes', component: HeroesComponent},
 	{path: 'login', component: LoginFormComponent},
-	{path: 'select-industry', component: IndustrySelect}
+	{path: 'select-industry', component: IndustrySelect},
+	{path: 'homescreen', component: HomeScreen}
 ];
 
 @NgModule({

@@ -20,7 +20,9 @@
 		<!-- Repeat industry with loop below -->
 		<div class="col-md-4 industry" *ngFor="let industry of industries">
 			<span class="industry_image">
-				<img src="app/login/img/sauro.jpg">
+				<a routerLink="/homescreen">
+					<img src="app/login/img/sauro.jpg">
+				</a>	
 				<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
 			</span>
 

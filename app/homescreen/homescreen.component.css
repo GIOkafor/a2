@@ -1,0 +1,58 @@
+body{
+	padding-top:70px;
+}
+
+.nav_items{
+	display: flex;
+    justify-content: space-between;
+}
+
+nav.navbar.navbar-default.navbar-fixed-top{
+	background-color: #005847;
+}
+
+.navbar-brand img{
+	height: 35px;
+	margin-top: 8px;
+	margin-left: 30px;
+	margin-right: 10px;
+}
+
+.navbar-brand{
+	padding: 0px;
+}
+
+.dropdown-menu{
+	background-color: #005847;
+	width: 300px;
+}
+
+/* TODO: Consider deleting first block below*/
+.navbar-nav li:first-child a{
+	padding-left: 10px;
+}
+.navbar-nav li img{
+	height: 22px;
+}
+
+.user_avatar img{
+	height: 45px;
+    border-radius: 25px;
+    margin-top: 4px;
+}
+
+.right_side{
+	display: flex;
+}
+
+.navbar-form input{
+	border-radius: 0 !important;
+}
+.navbar-form .btn{
+	background-color: #005847;
+	margin-left: -4px;
+	border-radius: 0px !important;
+}
+.navbar-form .btn .glyphicon-search:before{
+	color: #fff;
+}

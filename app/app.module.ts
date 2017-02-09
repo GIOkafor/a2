@@ -10,8 +10,12 @@ import {DashboardComponent} from './dashboard.component';
 
 import {LoginFormComponent} from './login/login-form.component';
 import {IndustrySelect} from './industry/industry-select.component';
+import {HomeScreen} from './homescreen/homescreen.component';
+
 import {IndustryService} from './industry/industry.service';
 import {UserService} from './user/user.service';
+import {PostService} from './homescreen/posts/posts.service';
+import {NotificationComponent} from './homescreen/notifications/notifications.component';
 
 import {AppRoutingModule} from './app-routing.module';
 
@@ -27,9 +31,11 @@ import {AppRoutingModule} from './app-routing.module';
   	HeroDetailComponent,
   	HeroesComponent,
     LoginFormComponent,
-    IndustrySelect
+    IndustrySelect,
+    HomeScreen,
+    NotificationComponent
   ],
-  providers: [HeroService, IndustryService, UserService],
+  providers: [HeroService, IndustryService, UserService, PostService],
   bootstrap:    [ AppComponent ]
 })
 
