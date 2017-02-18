@@ -15,7 +15,9 @@ import {HomeScreen} from './homescreen/homescreen.component';
 import {IndustryService} from './industry/industry.service';
 import {UserService} from './user/user.service';
 import {PostService} from './homescreen/posts/posts.service';
-import {NotificationComponent} from './homescreen/notifications/notifications.component';
+import {GroupsComponent} from './homescreen/groups/groups.component';
+
+import {ProjectsComponent} from './homescreen/projects/projects.component';
 
 import {AppRoutingModule} from './app-routing.module';
 
@@ -33,7 +35,8 @@ import {AppRoutingModule} from './app-routing.module';
     LoginFormComponent,
     IndustrySelect,
     HomeScreen,
-    NotificationComponent
+    GroupsComponent,
+    ProjectsComponent
   ],
   providers: [HeroService, IndustryService, UserService, PostService],
   bootstrap:    [ AppComponent ]

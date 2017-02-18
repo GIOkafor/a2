@@ -1,8 +1,9 @@
-import {Notification} from './notification';
+import {Groups} from './groups';
 
-export const NOTIFICATIONS: Notification[] = [
+export const GROUPS: Groups[] = [
 	{
 		notification_origin: 'Fan of The Lotus from 1900-2015',
+		is_favourited:true,
 		new_member_count: 2,
 		files_added_count: 7,
 		new_comments_count: 10,
@@ -10,6 +11,7 @@ export const NOTIFICATIONS: Notification[] = [
 	},
 	{
 		notification_origin: 'PHOTOGRAPHY MADE BEAUTIFUL',
+		is_favourited:false,
 		new_member_count: 0,
 		files_added_count: 5,
 		new_comments_count: 1,

@@ -1,0 +1,45 @@
+.drp_label{
+	color: #00adf4;
+	display: flex;
+	flex-flow: column;
+	text-align: end;
+    padding-right: 5px;
+    font-size: 12px;
+}
+.notification_container{
+	color: #fff;
+}
+.notification_body{
+	padding: 5px;
+}
+
+hr{
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+
+img.media-object{
+	width: 80px !important;
+	border:1.5px solid white;
+}
+.notification_header{
+	display: flex;
+}
+.notification_header_text{
+	width: 185px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.notification_header_text:hover{
+	width: auto;
+    overflow: visible;
+    white-space: normal;
+}
+.notification_count{
+	color: #00a7eb;
+}
+.notification_description{
+	font-size: 13px;
+	color: #9ea5a4;
+}

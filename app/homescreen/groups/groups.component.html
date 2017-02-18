@@ -8,30 +8,34 @@
 			<!-- Repeat for notification in notifications -->
 			<div class="media notification_body" *ngFor="let notification of notifications">
 				<div class="media-left media-middle">
-					<img class="media-object" src="..." alt="...">
+					<!-- TODO: Change image source location -->
+					<img class="media-object" src="app/login/img/sauro.jpg" alt="...">
 				</div>
 								
 				<div class="media-body notification_text">
 					<div class="notification_header">
 						<span class="notification_header_text">{{notification.notification_origin}} </span>
-						<span class="glyphicon glyphicon-star is_favourited"></span>
+						<span class="glyphicon glyphicon-star is_favourited" *ngIf="notification.is_favourited"></span>
 					</div>
 
-					<div class="member_request">
+					<div class="member_request" *ngIf="notification.new_member_count>0">
 						<span class="notification_count">{{notification.new_member_count}}</span>
 						<span class="notification_description">New member request</span>
 					</div>
 
-					<div class="files_added">
+					<div class="files_added" *ngIf="notification.files_added_count>0">
 						<span class="notification_count">{{notification.files_added_count}}</span>
 						<span class="notification_description">New files added</span>
 					</div>
 
-					<div class="new_comments">
+					<div class="new_comments" *ngIf="notification.new_comments_count>0">
 						<span class="notification_count">{{notification.new_comments_count}}</span>
 						<span class="notification_description">New comments</span>
 					</div>
 				</div>
+
+				<hr>
 			</div>
 	</div>
+
 </div>

@@ -1,24 +1,24 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 
-import {Notification} from './notification';
-import {NotificationService} from './notification.service';
+import {Groups} from './groups';
+import {GroupsService} from './groups.service';
 
 @Component({
 	moduleId: module.id,
-	selector: 'notifications',
-	templateUrl: 'notifications.component.html',
-	styleUrls: ['notification.css'],
-	exportAs: 'notifications',
-	providers: [NotificationService]
+	selector: 'groups',
+	templateUrl: 'groups.component.html',
+	styleUrls: ['groups.css'],
+	exportAs: 'groups',
+	providers: [GroupsService]
 })
 
-export class NotificationComponent {
+export class GroupsComponent {
 	//notification_count
-	notifications: Notification[];
+	notifications: Groups[];
 	activity_count: number;
 
-	constructor(private notificationService:NotificationService) {
+	constructor(private notificationService:GroupsService) {
 		// code...
 	}
 
@@ -31,10 +31,6 @@ export class NotificationComponent {
 			this.notifications = notifications;
 		
 			this.getActivityCount(notifications);
-
-			//TODO: Remove logging messages
-			console.log('Notifications are', this.notifications);
-			console.log('Activity count is', this.activity_count);
 		})
 	
 		.catch(function(err){
@@ -42,7 +38,7 @@ export class NotificationComponent {
 		});
 	}
 
-	getActivityCount(notifications:Notification[]): void{
+	getActivityCount(notifications:Groups[]): void{
 		this.activity_count = 0;
 
 		for(var i = 0; i<2; i++){

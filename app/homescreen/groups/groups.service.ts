@@ -1,23 +1,24 @@
 import {Injectable} from '@angular/core';
 
-import {Notification} from './notification';
-import {NOTIFICATIONS} from './mock-notifications';
+import {Groups} from './groups';
+import {GROUPS} from './mock-groups';
 
 @Injectable()
-export class NotificationService {
+export class GroupsService {
 	
 	constructor() {
 		// code...
 	}
 
-	getNotifications(): Promise<Notification[]>{
+	getNotifications(): Promise<Groups[]>{
 		//TODO: Query server for notifications
 		//return mock notifications for now..
-		console.log('Notifications being returned are: ',NOTIFICATIONS);
-		return Promise.resolve(NOTIFICATIONS);
+		return Promise.resolve(GROUPS);
 	}
 
-	getActivityCount(notifications:Notification[]){
+	//TODO: Consider putting this to use
+	//this doesn't get used atm, as it currently defers to the one in component
+	getActivityCount(notifications:Groups[]){
 		var total_activity_count = 0;
 
 		for(var i = 0; i<notifications.length; i++){

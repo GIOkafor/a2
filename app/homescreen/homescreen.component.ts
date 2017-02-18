@@ -4,15 +4,19 @@ import {User} from '../user/user';
 import {Industry} from '../industry/industry';
 import {IndustryService} from '../industry/industry.service';
 import {UserService} from '../user/user.service';
-import {NotificationService} from './notifications/notification.service';
-import {NotificationComponent} from './notifications/notifications.component';
+
+import {GroupsService} from './groups/groups.service';
+import {GroupsComponent} from './groups/groups.component';
+
+import {ProjectsComponent} from './projects/projects.component';
+import {ProjectsService} from './projects/projects.service';
 
 @Component({
 	moduleId: module.id,
 	selector: 'homescreen',
 	templateUrl: 'homescreen.component.html',
 	styleUrls: ['homescreen.component.css'],
-	providers: [NotificationComponent, NotificationService]
+	providers: [GroupsComponent, GroupsService, ProjectsComponent, ProjectsService]
 })
 
 export class HomeScreen {
