@@ -16,8 +16,11 @@ import {IndustryService} from './industry/industry.service';
 import {UserService} from './user/user.service';
 import {PostService} from './homescreen/posts/posts.service';
 import {GroupsComponent} from './homescreen/groups/groups.component';
+import {FeedsComponent} from './homescreen/feeds/feeds.component';
 
 import {ProjectsComponent} from './homescreen/projects/projects.component';
+
+import {FollowingComponent} from './followers/following.component';
 
 import {AppRoutingModule} from './app-routing.module';
 
@@ -36,7 +39,9 @@ import {AppRoutingModule} from './app-routing.module';
     IndustrySelect,
     HomeScreen,
     GroupsComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    FollowingComponent,
+    FeedsComponent
   ],
   providers: [HeroService, IndustryService, UserService, PostService],
   bootstrap:    [ AppComponent ]

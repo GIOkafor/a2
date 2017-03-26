@@ -11,12 +11,22 @@ import {GroupsComponent} from './groups/groups.component';
 import {ProjectsComponent} from './projects/projects.component';
 import {ProjectsService} from './projects/projects.service';
 
+import {FollowingComponent} from '../followers/following.component';
+import {FollowingService} from '../followers/following.service';
+
 @Component({
 	moduleId: module.id,
 	selector: 'homescreen',
 	templateUrl: 'homescreen.component.html',
 	styleUrls: ['homescreen.component.css'],
-	providers: [GroupsComponent, GroupsService, ProjectsComponent, ProjectsService]
+	providers: [
+				GroupsComponent, 
+				GroupsService, 
+				ProjectsComponent, 
+				ProjectsService, 
+				FollowingComponent, 
+				FollowingService
+				]
 })
 
 export class HomeScreen {

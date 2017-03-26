@@ -1,0 +1,26 @@
+<!-- Folowing stuff goes here -->
+<div class="following">
+	<div class="following_header">
+		<h4>FOLLOWING</h4>
+
+		<!-- TODO: Replace wth menu thing -->
+		<span class="hamburger_menu"></span>
+	</div>
+		
+	<div *ngFor="let following of following_activity">
+		<div class="following_activity">
+			<span class="following_name">{{following.firstName}} {{following.lastName}}</span>
+			<img class="following_image" src="{{following.profile_image}}" />
+			<div class="activity">
+				<div class="post_text">
+					{{following.latest_post.post_caption}}
+				</div>
+
+				<div class="post_image" *ngIf="following.latest_post.image != ''">
+					<img *ngFor="let post_image of following.latest_post.image" src="app/followers/img/{{post_image}}">
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>

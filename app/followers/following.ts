@@ -1,6 +1,6 @@
 import {Post} from '../homescreen/posts/post';
 
-export class Followers {
+export class Following {
 	
 	constructor() {
 		// code...

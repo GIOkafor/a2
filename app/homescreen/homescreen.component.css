@@ -2,6 +2,10 @@ body{
 	padding-top:70px;
 }
 
+.content{
+	margin-top: 50px;
+}
+
 .nav_items{
 	display: flex;
     justify-content: space-between;
@@ -55,4 +59,63 @@ nav.navbar.navbar-default.navbar-fixed-top{
 }
 .navbar-form .btn .glyphicon-search:before{
 	color: #fff;
+}
+
+/* Profile styles */
+.profile{
+	width: 25%;
+}
+.profile_image{
+	display: block;
+	height: 200px;
+	width: 310px;
+	background: #898989; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#898989, #373737); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#898989, #373737); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#898989, #373737); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#898989, #373737); /* Standard syntax (must be last) */
+}
+.profile_image img{
+	margin-left: 30%;
+    padding-top: 25px;
+    height: 150px;
+}
+.profile_text{
+	position: absolute;
+	top:200px;
+	display: flex;
+    flex-direction: column;
+    color: white;
+    padding:6px;
+}
+.username{
+	font-size: large;
+    font-weight: 600;
+}
+.profile_navigation ul{
+	list-style: none;
+	display: inline-flex;
+	padding-left: 0px;
+}
+.profile_navigation li{
+	margin: 1px;
+}
+.profile_navigation a:hover{
+	text-decoration:none;
+}
+.profile_link{
+	display: flex;
+    flex-direction: column;
+    width: 60px;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(145, 193, 219);
+}
+.profile_link img{
+	height: 22px;
+	width: 22px;
+}
+.profile_link span{
+	font-size: 10.5px;
+	color: black;
 }

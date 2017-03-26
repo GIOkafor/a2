@@ -1,7 +1,7 @@
 export class Post{
 	constructor(
 	public post_caption:string,
-	public image:string,
+	public image:string[],
 	public post_time: string,
 	public shares: number,
 	public comments_count: number,
