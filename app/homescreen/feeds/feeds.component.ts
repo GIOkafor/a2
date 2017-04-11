@@ -33,4 +33,9 @@ export class FeedsComponent {
 			console.log(err);
 		});
 	}
+
+	//returns value of feed object type
+	checkFeedType(feedObj: Feed){
+		return feedObj.feed_type;
+	}
 }

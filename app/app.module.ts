@@ -20,6 +20,7 @@ import {FeedsComponent} from './homescreen/feeds/feeds.component';
 
 import {ProjectsComponent} from './homescreen/projects/projects.component';
 
+import {SeedingComponent} from './homescreen/seeding/seeding.component';
 import {FollowingComponent} from './followers/following.component';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -41,7 +42,8 @@ import {AppRoutingModule} from './app-routing.module';
     GroupsComponent,
     ProjectsComponent,
     FollowingComponent,
-    FeedsComponent
+    FeedsComponent,
+    SeedingComponent
   ],
   providers: [HeroService, IndustryService, UserService, PostService],
   bootstrap:    [ AppComponent ]

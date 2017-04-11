@@ -8,18 +8,33 @@
 	</div>
 		
 	<div *ngFor="let following of following_activity">
+		<div class="following_name">{{following.firstName}} {{following.lastName}}</div>
+
 		<div class="following_activity">
-			<span class="following_name">{{following.firstName}} {{following.lastName}}</span>
 			<img class="following_image" src="{{following.profile_image}}" />
 			<div class="activity">
-				<div class="post_text">
-					{{following.latest_post.post_caption}}
-				</div>
+				<div *ngIf="following.latest_post.image != ''">
+					
+					<ul class="post_image" *ngIf="following.latest_post.photos_count > 1">
+						<li *ngFor="let post_image of following.latest_post.image">
+							<img src="app/followers/img/{{post_image}}">
+						</li>
+					</ul>
 
-				<div class="post_image" *ngIf="following.latest_post.image != ''">
-					<img *ngFor="let post_image of following.latest_post.image" src="app/followers/img/{{post_image}}">
+					<div *ngIf="following.latest_post.photos_count == 1">
+						<img *ngFor="let post_image of following.latest_post.image" class="singleImage" src="app/followers/img/{{post_image}}">
+					</div>
 				</div>
 				
+				<div>
+					<div class="post_text text_only" *ngIf="following.latest_post.image == ''">
+						{{following.latest_post.post_caption}}
+					</div>
+					
+					<div class="post_text with_image" *ngIf="following.latest_post.image != ''">
+						{{following.latest_post.post_caption}}
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

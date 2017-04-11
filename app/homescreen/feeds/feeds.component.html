@@ -1,10 +1,63 @@
 <div class="feeds">
+	<div class="section_title">
+		<h4>FEEDS</h4>
+	</div>
 	<div *ngFor="let feed of feed_activity">
-		<div class="feed_activity">
-			<span class="feed_heading"> 
-				{{feed.feed_type}}
-				{{feed.feed_origin}}
-			</span>
+		<div class="feed_item">
+			<div class="feed_heading"> 
+				<span class="feed_color_box" [ngClass]="
+					{
+						'project_related_box': checkFeedType(feed) === 'Project Related', 
+						'new_member_box': checkFeedType(feed) === 'New member', 
+						'industry_related_box': checkFeedType(feed) === 'Industry related', 
+						'group_related_box': checkFeedType(feed) === 'Group related', 
+						'job_posting_box': checkFeedType(feed) === 'Job Posting'
+					}"></span>
+				<span class="feed_type">{{feed.feed_type}}</span>
+				<span class="feed_origin">{{feed.feed_origin}}</span>
+			</div>
+
+			<div [ngClass]="{'images_only': checkFeedType(feed) === 'Project Related', 'image_text': checkFeedType(feed) === 'New member' || 'Group related' || 'Job Posting', 'text_only': checkFeedType(feed) === 'Industry related'}">
+				<div class="feed_image" [ngClass]="{'no_image':feed.image ==''}">
+					<div class="multiple_images" *ngIf="feed.image.length > 1">
+						<li *ngFor="let feed_image of feed.image">
+							<img src="app/homescreen/feeds/img/{{feed_image}}">
+						</li>
+					</div>
+
+					<img class="single_image" *ngIf="feed.image.length == 1" src="app/homescreen/feeds/img/{{feed.image}}">
+				</div>
+
+				<div class="feed_text">
+					<!-- New member text block -->
+					<div *ngIf="feed.feed_type=='New member'">
+						<span class="industry">Industry: {{feed.industry}}</span>
+						<span class="occupation">Occupation: {{feed.occupation}}</span>
+						<span class="location">Location: {{feed.location}}</span>
+						<span class="url">{{feed.url}}</span>
+					</div>
+
+					<!-- Job Posting text block -->
+					<div *ngIf="feed.feed_type=='Job Posting'">
+						<span class="job_title">Job Title: {{feed.job_title}}</span>
+						<span class="salary">Salary: {{feed.salary}}</span>
+						<span class="location">Location: {{feed.location}}</span>
+						<span class="posted">posted on {{feed.posted}}</span>
+					</div>
+
+					<!-- Group related text block -->
+					<div *ngIf="feed.feed_type=='Group related'">
+						<span class="member_count">[member count]</span>
+						<span class="group_description">{{feed.salary}}</span>
+						<span class="text">{{feed.posted}}</span>
+					</div>
+
+					<!-- Just text block -->
+					<div *ngIf="feed.feed_type=='Industry related'">
+						<span class="raw_text">{{feed.text}}</span>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

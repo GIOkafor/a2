@@ -75,78 +75,82 @@
 </nav>
 
 <div class="content">
-	<!-- Profile contents go here -->
-	<div class="profile">
-		<div class="image_and_text">
-			<div class="profile_image">
-				<img src="app/homescreen/img/user_temp_avatar.png">
-			</div>
+	<div class="profile_following">
+		<!-- Profile contents go here -->
+		<div class="profile">
+			<div class="image_and_text">
+				<div class="profile_image">
+					<img src="app/homescreen/img/user_temp_avatar.png">
+				</div>
 
-			<div class="profile_text">
-				<span class="username">DAVID ABOJI <!--{{user.name|uppercase}}--></span>
-				<span class="industry">Industry: Fashion/Entertainment <!--{{user.industry|uppercase}}--></span>
+				<div class="profile_text">
+					<span class="username">DAVID ABOJI <!--{{user.name|uppercase}}--></span>
+					<span class="industry">Industry: Fashion/Entertainment <!--{{user.industry|uppercase}}--></span>
+				</div>
+			</div>
+			
+			<div class="profile_navigation">
+				<ul>
+					<li>
+						<a href="">
+							<div class="profile_link">
+								<img src="app/homescreen/img/briefcase-8x.png">
+								<span>PROJECTS</span>
+							</div>
+						</a>
+					</li>
+
+					<li>
+						<a href="">
+							<div class="profile_link">
+								<img src="app/homescreen/img/command-8xB.png">
+								<span>GROUPS</span>
+							</div>
+						</a>
+					</li>
+
+					<li>
+						<a href="">
+							<div class="profile_link">
+								<img src="app/homescreen/img/envelope-closed-8x.png">
+								<span>INBOX</span>
+							</div>
+						</a>
+					</li>
+
+					<li>
+						<a href="">
+							<div class="profile_link">
+								<img src="app/homescreen/img/person-8x.png">
+								<span>FRIENDS</span>
+							</div>
+						</a>
+					</li>
+
+					<li>
+						<a href="">
+							<div class="profile_link">
+								<img src="app/homescreen/img/image-8x.png">
+								<span>MEDIA</span>
+							</div>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
+
+		<!-- Following notifications - This stays static -->
+		<following class="following"></following>
+	</div>
+	<!-- Section for POSTS & SEEDING -->
+	<!-- Section is dynamic --> 
+	<router-outlet class="dynamic_section">
 		
-		<div class="profile_navigation">
-			<ul>
-				<li>
-					<a href="">
-						<div class="profile_link">
-							<img src="app/homescreen/img/briefcase-8x.png">
-							<span>PROJECTS</span>
-						</div>
-					</a>
-				</li>
+	</router-outlet>
 
-				<li>
-					<a href="">
-						<div class="profile_link">
-							<img src="app/homescreen/img/command-8xB.png">
-							<span>GROUPS</span>
-						</div>
-					</a>
-				</li>
+	<!-- Seeding Section goes here -->
+	<seeding class="seeding"></seeding>
 
-				<li>
-					<a href="">
-						<div class="profile_link">
-							<img src="app/homescreen/img/envelope-closed-8x.png">
-							<span>INBOX</span>
-						</div>
-					</a>
-				</li>
-
-				<li>
-					<a href="">
-						<div class="profile_link">
-							<img src="app/homescreen/img/person-8x.png">
-							<span>FRIENDS</span>
-						</div>
-					</a>
-				</li>
-
-				<li>
-					<a href="">
-						<div class="profile_link">
-							<img src="app/homescreen/img/image-8x.png">
-							<span>MEDIA</span>
-						</div>
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-
-	<!-- This stays static -->
-	<following></following>
-
-	<router-outlet></router-outlet>
-
-	<!-- Feeds Section -->
-	<feeds></feeds>
-
-	<div class="feeds">
-		<!-- Feed contents go here -->
-	</div>
+	<!-- Feeds Section goes here -->
+	<feeds class="feeds"></feeds>
 </div>

@@ -4,7 +4,7 @@ export const FEEDS: Feed[] = [
 	{
 		feed_type:'Project Related',
 		feed_origin: 'Some Rando User',
-		image: ['image1', 'image2', 'image3'],
+		image: ['versace_logo.jpg', 'leopard4.jpg', 'versace_logo.jpg'],
 		industry: '',
 		occupation: '',
 		location: '',
@@ -17,7 +17,7 @@ export const FEEDS: Feed[] = [
 	{
 		feed_type: 'New member',
 		feed_origin: 'Joseph Gordon-Levitt',
-		image: ['dudes image'],
+		image: ['Joseph-Gordon-Levitt.jpg'],
 		industry: 'fashion/entertainment',
 		occupation: 'Actor, Film director',
 		location: 'New York, US',
@@ -38,7 +38,7 @@ export const FEEDS: Feed[] = [
 		job_title: '',
 		salary: '',
 		posted: '',
-		text: 'Some arbitrary text relating to industry'
+		text: 'Hodor hodor - hodor; hodor hodor hodor, hodor, hodor hodor. Hodor! Hodor hodor, hodor - hodor hodor; hodor hodor? Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor. Hodor, hodor hodor?'
 	},
 	{
 		feed_type:'Job Posting',
@@ -56,7 +56,7 @@ export const FEEDS: Feed[] = [
 	{
 		feed_type:'Group related',
 		feed_origin: 'Group name',
-		image: [''],
+		image: ['socks.jpeg'],
 		industry: '',
 		occupation: '',
 		location: '',
@@ -69,7 +69,7 @@ export const FEEDS: Feed[] = [
 	{
 		feed_type: 'New member',
 		feed_origin: 'Anthony Kent',
-		image: ['kents-image.png'],
+		image: ['chloe_moretz.jpg'],
 		industry: 'fashion/entertainment',
 		occupation: 'Photographer',
 		location: 'Toronto, ON',

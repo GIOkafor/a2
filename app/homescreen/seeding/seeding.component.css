@@ -1,0 +1,18 @@
+.section_title{
+	background-color: #322f31;
+	color: white;
+	width: 100%;
+}
+.section_title h4{
+	padding: 10px;
+	margin-top: 5px;
+}
+.single_image img{
+	width: 100%;
+}
+.multi_images{
+	display: flex;
+}
+.image:first-child img{
+	flex-basis: 50%;
+}

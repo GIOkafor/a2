@@ -1,7 +1,4 @@
 /* Following styles */
-.following{
-	width:25%;
-}
 .following_header{
 	background-color: #322f31;
 	color: white;
@@ -10,14 +7,50 @@
 .following_header h4{
 	padding: 10px;
     margin-top: 0px;
-    margin-bottom: 0px;
 }
 .following_activity{
 	display: flex;
-    flex-direction: column;
+	margin-left: 3px;
 }
 .following_name{
 	background-color: #00e1b5;
-	width: 97%;
+	width: 97.3%;
     margin-left: 3px;
+}
+.activity{
+	padding-left: 10px;
+	display: flex;
+	margin-top: 2.5px;
+	justify-content: space-between;
+}
+.following_image{
+	height: 50px;
+	width: 50px !important;
+	margin-top: 2.5px;
+	padding-right: 5px;
+}
+.post_image{
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0px;
+}
+.post_image img{
+	height: 45px;
+}
+.post_image li:first-of-type img{
+	height: 90px;
+}
+.singleImage{
+	height: 90px
+}
+.post_text{
+	margin-left: 5px;
+	overflow-y: scroll;
+}
+.post_text.text_only{
+	height: 60px;
+}
+.post_text.with_image{
+	height: 90px;
 }

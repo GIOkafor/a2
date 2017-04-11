@@ -119,3 +119,22 @@ nav.navbar.navbar-default.navbar-fixed-top{
 	font-size: 10.5px;
 	color: black;
 }
+
+/* PAGE SECTIONS */
+.content{
+	display: flex;
+	width: 100%;
+}
+.profile_following{
+	width: 25%;
+}
+.dynamic_section{
+	width: 30%;
+}
+.seeding{
+	width: 20%;
+	margin-right: 10px;
+}
+.feeds{
+	width: 25%;
+}

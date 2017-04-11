@@ -1,0 +1,17 @@
+<div class="section_title">
+	<h4>SEEDING</h4>
+</div>
+
+<div class="section_body" *ngFor="let seeding of seeding_activity">
+	<div class="seeding_item">
+		<div class="multi_images" *ngIf="seeding.image.length > 1">
+			<div class="image" *ngFor="let image of seeding.image">
+				<img src="app/homescreen/seeding/img/{{image}}">
+			</div>
+		</div>
+
+		<div class="single_image" *ngIf="seeding.image.length == 1">
+			<img src="app/homescreen/seeding/img/{{seeding.image[0]}}">
+		</div>
+	</div>
+</div>

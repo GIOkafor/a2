@@ -1,0 +1,71 @@
+.section_title{
+	background-color: #322f31;
+	color: white;
+	width: 100%;
+}
+.section_title h4{
+	padding: 10px;
+	margin-top: 5px;
+}
+.feed_item{
+	display: flex;
+	flex-direction: column;
+}
+.feed_heading{
+	display: inline-flex;
+    align-items: stretch;
+    background-color: #3cb1da;
+    width: 100%;
+}
+.feed_color_box{
+    display: block;
+    width: 15px;
+}
+.project_related_box{
+	background-color: #2e8fb1;
+}
+.new_member_box{
+	background-color: #e2e020;
+}
+.industry_related_box{
+	background-color: #0b6a88;
+}
+.job_posting_box{
+	background-color: #239b5e;
+}
+.group_related_box{
+	background-color: #421aa2;
+}
+.feed_type{
+	padding: 0 10px;
+}
+.feed_origin{
+	background-color: #5ad0fa;
+    flex-grow: 2;
+    padding: 0 10px;
+}
+.multiple_images{
+	display: inline-flex;
+	list-style: none;
+	justify-content: space-between;
+}
+.multiple_images img{
+	height: 90px;
+}
+.image_text{
+	display: inline-flex;
+}
+.feed_image .single_image {
+    height: 75px;
+    width: 125px;
+    margin-top: 2px;
+}
+.no_image{
+	display: none;
+}
+
+.feed_text div {
+    display: flex;
+    flex-flow: column;
+    margin-left: 5px;
+}
