@@ -1,0 +1,31 @@
+<div class="posts">
+	<div class="section_title">
+	   <h4>Z POST</h4>
+	</div>
+
+	<div *ngFor="let post of posts">
+		<div class="post_item">
+			<div class="post_image" [ngClass]="{'no_image':post.image ==''}">
+				<div class="multiple_images" *ngIf="post.image.length > 1">
+					<div *ngFor="let image of post.image">
+						<img src="app/homescreen/posts/img/{{image}}">
+					</div>
+				</div>
+
+				<div>
+					<img *ngIf="post.image.length == 1" class="single_image" src="app/homescreen/posts/img/{{post.image[0]}}">
+				</div>
+			</div>
+
+			<div class="post_text">
+				<p>{{post.post_caption}}</p>
+			</div>
+
+			<div class="post_activity">
+				<p class="shares">{{post.shares | numberConverter}}</p>
+				<p class="comments">{{post.comments_count}} COMMENTS</p>
+				<p class="time">{{post.post_time | date:'medium'}}</p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -128,9 +128,13 @@ nav.navbar.navbar-default.navbar-fixed-top{
 .profile_following{
 	width: 25%;
 }
+
 .dynamic_section{
 	width: 30%;
+	margin-right: 10px;
+    margin-left: 5px;
 }
+
 .seeding{
 	width: 20%;
 	margin-right: 10px;

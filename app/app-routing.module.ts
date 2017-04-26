@@ -7,7 +7,7 @@ import {HeroDetailComponent} from './hero-detail.component';
 
 import {LoginFormComponent} from './login/login-form.component';
 import {IndustrySelect} from './industry/industry-select.component';
-import {HomeScreen} from './homescreen/homescreen.component';
+import {PageNotFoundComponent} from './page-not-found.component';
 
 const routes: Routes = [
 	{path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -16,7 +16,7 @@ const routes: Routes = [
 	{path: 'heroes', component: HeroesComponent},
 	{path: 'login', component: LoginFormComponent},
 	{path: 'select-industry', component: IndustrySelect},
-	{path: 'homescreen', component: HomeScreen}
+	{path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({

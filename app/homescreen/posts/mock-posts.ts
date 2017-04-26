@@ -2,7 +2,7 @@ import {Post} from './post';
 
 export const POSTS: Post[] = [
 	{
-		image: ['link_to_image'],
+		image: ['the-conversion-of-saul.jpg'],
 		post_caption: 'Check out this beautiful picture',
 		comments_count: 120,
 		photos_count: 1,
@@ -23,7 +23,7 @@ export const POSTS: Post[] = [
 
 	{
 		post_caption:'Hodor! Hodor hodor, HODOR hodor, hodor hodor; hodor hodor. Hodor, hodor. Hodor. Hodor, HODOR hodor, hodor hodor; hodor hodor, hodor. Hodor hodor. Hodor.',
-		image: ['next_image'],
+		image: ['air_boy.jpg', 'volley_act.jpg', 'Little-jockey-in-action.jpg', 'two_ppl.jpeg'],
 		post_time: '2015/6/9',
 		shares: 126,
 		comments_count: 3,

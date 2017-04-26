@@ -13,6 +13,9 @@
 .multi_images{
 	display: flex;
 }
+.multi_images img{
+	width: 100%;
+}
 .image:first-child img{
-	flex-basis: 50%;
+	
 }

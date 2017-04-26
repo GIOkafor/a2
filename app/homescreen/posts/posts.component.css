@@ -1,0 +1,38 @@
+.section_title{
+    background-color: #322f31;
+    color: white;
+    width: 100%;
+}
+.section_title h4{
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.post_item{
+    border: 1px solid #cccccc;
+    margin-bottom: 20px;
+}
+
+.post_text, .post_image, .post_activity{padding: 5px;}
+
+.no_image{display: none;}
+.post_image{
+	border-bottom: 1px solid #cccccc;
+}
+.single_image{
+	width: 100%;
+}
+.multiple_images{
+
+}
+
+.post_activity{
+	background-color: #c8e0e7;
+	display: flex;
+	justify-content: space-between;
+	font-size: 10px;
+    font-weight: bold;
+}
+.post_activity p{
+	margin-bottom: 0px;
+}

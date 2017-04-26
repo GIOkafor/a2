@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }      from '@angular/forms';
 
 import { AppComponent }  from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {HomeScreenModule} from './homescreen/homescreen.module';
+
 import{ HeroDetailComponent } from './hero-detail.component';
 import{ HeroesComponent } from './heroes.component';
 import {HeroService} from './hero.service';
@@ -10,25 +13,18 @@ import {DashboardComponent} from './dashboard.component';
 
 import {LoginFormComponent} from './login/login-form.component';
 import {IndustrySelect} from './industry/industry-select.component';
-import {HomeScreen} from './homescreen/homescreen.component';
+//import {HomeScreen} from './homescreen/homescreen.component';
 
 import {IndustryService} from './industry/industry.service';
 import {UserService} from './user/user.service';
-import {PostService} from './homescreen/posts/posts.service';
-import {GroupsComponent} from './homescreen/groups/groups.component';
-import {FeedsComponent} from './homescreen/feeds/feeds.component';
 
-import {ProjectsComponent} from './homescreen/projects/projects.component';
-
-import {SeedingComponent} from './homescreen/seeding/seeding.component';
-import {FollowingComponent} from './followers/following.component';
-
-import {AppRoutingModule} from './app-routing.module';
+import {PageNotFoundComponent} from './page-not-found.component';
 
 @NgModule({
   imports:      [ 
   	BrowserModule, 
   	FormsModule,
+    HomeScreenModule,//putting this before AppRoutingModule lets it check the routes in this file first before matching the wildcard
   	AppRoutingModule
   	],
   declarations: [ 
@@ -38,14 +34,9 @@ import {AppRoutingModule} from './app-routing.module';
   	HeroesComponent,
     LoginFormComponent,
     IndustrySelect,
-    HomeScreen,
-    GroupsComponent,
-    ProjectsComponent,
-    FollowingComponent,
-    FeedsComponent,
-    SeedingComponent
+    PageNotFoundComponent
   ],
-  providers: [HeroService, IndustryService, UserService, PostService],
+  providers: [HeroService, IndustryService, UserService],
   bootstrap:    [ AppComponent ]
 })
 
