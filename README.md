@@ -18,11 +18,10 @@ Both the compiler and the server watch for file changes.
 
 Shut it down manually with `Ctrl-C`.
 
-You're ready to write your application.
 
 ### npm scripts
 
-We've captured many of the most useful commands in npm scripts defined in the `package.json`:
+Many of the most useful commands in npm scripts defined in the `package.json`:
 
 * `npm start` - runs the compiler and a server at the same time, both in "watch mode".
 * `npm run tsc` - runs the TypeScript compiler once.
@@ -38,13 +37,14 @@ Here are the test related scripts:
 
 ## Testing
 
-The QuickStart documentation doesn't discuss testing.
 This repo adds both karma/jasmine unit test and protractor end-to-end testing support.
 
 These tools are configured for specific conventions described below.
 
 *It is unwise and rarely possible to run the application, the unit tests, and the e2e tests at the same time.
 We recommend that you shut down one before starting another.*
+
+I haven't written any tests yet so it's pointless running this at the moment.
 
 ### Unit Tests
 TypeScript unit-tests are usually in the `app` folder. Their filenames must end in `.spec`.
