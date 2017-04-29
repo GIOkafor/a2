@@ -8,7 +8,7 @@ import {UserService} from '../user/user.service';
 import {GroupsService} from './groups/groups.service';
 import {GroupsComponent} from './groups/groups.component';
 
-import {ProjectsComponent} from './projects/projects.component';
+import {ProjectNotificationsComponent} from './projects/project-notifications.component';
 import {ProjectsService} from './projects/projects.service';
 
 import {FollowingComponent} from '../followers/following.component';
@@ -22,7 +22,7 @@ import {FollowingService} from '../followers/following.service';
 	providers: [
 				GroupsComponent, 
 				GroupsService, 
-				ProjectsComponent, 
+				ProjectNotificationsComponent, 
 				ProjectsService, 
 				FollowingComponent, 
 				FollowingService

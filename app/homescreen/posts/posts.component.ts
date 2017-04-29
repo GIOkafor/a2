@@ -24,7 +24,7 @@ export class PostsComponent {
 	getPosts(){
 		this.postService.getPosts()
 			.then(pos => {
-				console.log("Feeds from service: ", pos);
+				console.log("Posts from service: ", pos);
 				this.posts = pos;
 			})
 			.catch(function(err){

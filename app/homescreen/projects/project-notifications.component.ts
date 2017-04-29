@@ -7,14 +7,14 @@ declare var moment: any;
 
 @Component({
 	moduleId: module.id,
-	selector: 'projects',
+	selector: 'project-notifications',
 	providers: [ProjectsService],
-	templateUrl: 'projects.component.html',
-	styleUrls: ['projects.component.css', '../groups/groups.css'],
-	exportAs: 'projects'
+	templateUrl: 'project-notifications.component.html',
+	styleUrls: ['project-notifications.component.css', '../groups/groups.css'],
+	exportAs: 'project-notifications'
 })
 
-export class ProjectsComponent {
+export class ProjectNotificationsComponent {
 	//properties
 	projectNotifications:Projects[];
 	activity_count:number;

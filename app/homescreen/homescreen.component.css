@@ -111,7 +111,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     padding: 5px;
     background-color: rgb(145, 193, 219);
 }
-.profile_link img{
+.profile_link img, .section_title img{
 	height: 22px;
 	width: 22px;
 }

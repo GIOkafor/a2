@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeScreen }    from './homescreen.component';
 import { PostsComponent }    from './posts/posts.component';
+import {ProjectsComponent} from './projects/projects.components';
 import { PostDetailsComponent }    from './posts/post-details.component';
 
 const homeScreenRoutes: Routes = [
@@ -14,6 +15,10 @@ const homeScreenRoutes: Routes = [
   			path: '',  
   			component: PostsComponent,
   		},
+      { 
+        path: 'projects',  
+        component: ProjectsComponent,
+      },
   		{
   			path: 'post-details',//suffix with id or something
   			component: PostDetailsComponent

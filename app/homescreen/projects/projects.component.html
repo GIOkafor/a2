@@ -1,41 +1,23 @@
-<div *ngIf="projectNotifications">
-	<div class="drp_label">
-		<span class="dropdown_title">PROJECTS</span>
-		<span class="dropdown_summary">{{activity_count}} New</span>
+<div class="section_title">
+	<img class="projects_icon" src="app/homescreen/img/briefcase-8x_w.png" alt="breifcase">
+	<ul class="nav nav-tabs">
+		<li role="presentation">
+			<a href="#">YOUR PROJECTS</a>
+		</li>
+		<li role="presentation">
+			<a href="#">ACTIVE PROJECTS</a>
+		</li>
+		<li role="presentation">
+			<a href="#">CREATE</a>
+		</li>
+	</ul>
+	
+	<img class="options_icon" src="app/homescreen/img/options_button8x.png" alt="options">
+</div>
+
+<div class="row project_list">
+	<div *ngFor="let project of projects; let i = index" class="project_container">
+		<div class="clearfix" *ngIf="i % 3 == 0"></div>
+		<div class="col-md-4 project">{{project.title}}</div>
 	</div>
-
-	<div class="notification_container">
-			<!-- Repeat for notification in projectNotifications -->
-			<div class="media notification_body" *ngFor="let notification of projectNotifications">
-				<div class="media-left media-middle">
-					<!-- TODO: Change image source location -->
-					<img class="media-object" src="app/login/img/sauro.jpg" alt="...">
-				</div>
-								
-				<div class="media-body notification_text">
-					<div class="notification_header">
-						<span class="notification_header_text">{{notification.title}} </span>
-						<span class="glyphicon glyphicon-star is_favourited" *ngIf="notification.is_favourited"></span>
-					</div>
-
-					<div class="member_request" *ngIf="notification.new_member_request>0">
-						<span class="notification_count">{{notification.new_member_request}}</span>
-						<span class="notification_description">New member request</span>
-					</div>
-
-					<div class="files_added" *ngIf="notification.files_added>0">
-						<span class="notification_count">{{notification.files_added}}</span>
-						<span class="notification_description">New files added</span>
-					</div>
-
-					<div class="new_comments" *ngIf="notification.new_notes>0">
-						<span class="notification_count">{{notification.new_notes}}</span>
-						<span class="notification_description">New Notes</span>
-					</div>
-				</div>
-
-				<hr>
-			</div>
-	</div>
-
 </div>

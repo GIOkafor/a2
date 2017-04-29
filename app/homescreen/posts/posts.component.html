@@ -6,11 +6,11 @@
 	<div *ngFor="let post of posts">
 		<div class="post_item">
 			<div class="post_image" [ngClass]="{'no_image':post.image ==''}">
-				<div class="multiple_images" *ngIf="post.image.length > 3">
+				<div class="multiple_images" *ngIf="post.image.length >= 3">
 					<img src="app/homescreen/posts/img/{{post.image[0]}}">
 					<img src="app/homescreen/posts/img/{{post.image[1]}}">
 					<img src="app/homescreen/posts/img/{{post.image[2]}}">
-					<h3 class="more_left">+{{post.image.length-3}} </h3>
+					<h3 class="more_left" *ngIf="post.image.length > 3">+{{post.image.length-3}} </h3>
 				</div>
 
 				<div>

@@ -9,7 +9,8 @@ import {PostsComponent} from './posts/posts.component';
 import { PostDetailsComponent }    from './posts/post-details.component';
 import {GroupsComponent} from './groups/groups.component';
 import {FeedsComponent} from './feeds/feeds.component';
-import {ProjectsComponent} from './projects/projects.component';
+import {ProjectNotificationsComponent} from './projects/project-notifications.component';
+import {ProjectsComponent} from './projects/projects.components';
 import {SeedingComponent} from './seeding/seeding.component';
 import {FollowingComponent} from '../followers/following.component';
 
@@ -30,6 +31,7 @@ import {HomeScreenRoutingModule} from './homescreen-routing.module';
     PostDetailsComponent,
     GroupsComponent,
     FeedsComponent,
+    ProjectNotificationsComponent,
     ProjectsComponent,
     SeedingComponent,
     FollowingComponent,

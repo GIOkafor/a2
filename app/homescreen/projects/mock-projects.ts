@@ -9,7 +9,12 @@ export const PROJECTS:Projects[] = [
 		project_start_date: new Date('November 26th, 2016'),
 		project_end_date: new Date('February 26th, 2017'),
 		activity_count: 19,
-		is_favourited: true
+		is_favourited: true,
+		project_admin: '',
+		seeking: [{role: 'mechanic', industry: 'Auto Industry'}],
+		project_members: [''],
+		images: [''],
+		description: ''
 	},
 	{
 		title: 'Techlan Startup',
@@ -19,7 +24,12 @@ export const PROJECTS:Projects[] = [
 		project_start_date: new Date('June 12th, 2015'),
 		project_end_date: new Date('January 30th, 2020'),
 		activity_count: 8,
-		is_favourited: false
+		is_favourited: false,
+		project_admin: '',
+		seeking: [{role: 'mechanic', industry: 'Auto Industry'}],
+		project_members: [''],
+		images: [''],
+		description: ''
 	},
 	{
 		title: 'Blue Mountain',
@@ -29,6 +39,11 @@ export const PROJECTS:Projects[] = [
 		project_start_date: new Date('October 1st, 2011'),
 		project_end_date: new Date('July 24th, 2014'),
 		activity_count: 0,
-		is_favourited: false
+		is_favourited: false,
+		project_admin: '',
+		seeking: [{role: 'Manager', industry: 'Construction Industry'}, {role: 'Photographer', industry: 'Fashion/entertainent'},{role: 'Graphic designer', industry: ''}, {role: 'Manager', industry: 'Financial Industry'}],
+		project_members: [''],
+		images: [''],
+		description: ''
 	}
 ];
