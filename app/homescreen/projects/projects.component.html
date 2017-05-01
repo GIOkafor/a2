@@ -18,6 +18,12 @@
 <div class="row project_list">
 	<div *ngFor="let project of projects; let i = index" class="project_container">
 		<div class="clearfix" *ngIf="i % 3 == 0"></div>
-		<div class="col-md-4 project">{{project.title}}</div>
+		<div class="col-md-4 project">
+			<img class="has_no_image" src="app/homescreen/projects/img/no_image_project.jpg">
+			<!-- If project has image 
+			<img *ngIf="project.img != ''" src="app/homescreen/projects/img/{{project.img}}">
+			-->
+			<span class="project_title">{{project.title}}</span>
+		</div>
 	</div>
 </div>

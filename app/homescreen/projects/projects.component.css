@@ -22,3 +22,32 @@
 	display: flex;
 	border: none !important;
 }
+.project_list{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.project_container{
+	background-color: grey;
+    width: 33%;
+}
+.project{
+	width: 100%;
+    display: flex;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.project>img, .has_no_image{
+	width: 100%;
+}
+.has_no_image{
+	border: 2px solid #225178;
+}
+.project_title{
+	margin: 0px;
+    position: relative;
+    left: -100px;
+    top: 80px;
+}
