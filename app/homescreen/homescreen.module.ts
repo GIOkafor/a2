@@ -10,7 +10,9 @@ import { PostDetailsComponent }    from './posts/post-details.component';
 import {GroupsComponent} from './groups/groups.component';
 import {FeedsComponent} from './feeds/feeds.component';
 import {ProjectNotificationsComponent} from './projects/project-notifications.component';
+import {ProjectsHomeComponent} from './projects/projects-home.component';
 import {ProjectsComponent} from './projects/projects.components';
+import {ProjectDetailsComponent} from './projects/project-details.component';
 import {SeedingComponent} from './seeding/seeding.component';
 import {FollowingComponent} from '../followers/following.component';
 
@@ -32,7 +34,9 @@ import {HomeScreenRoutingModule} from './homescreen-routing.module';
     GroupsComponent,
     FeedsComponent,
     ProjectNotificationsComponent,
+    ProjectsHomeComponent,
     ProjectsComponent,
+    ProjectDetailsComponent,
     SeedingComponent,
     FollowingComponent,
     NumberConverter

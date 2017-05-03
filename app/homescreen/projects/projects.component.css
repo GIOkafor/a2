@@ -25,19 +25,22 @@
 .project_list{
     margin-right: 0px !important;
     margin-left: 0px !important;
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
 }
 .project_container{
 	background-color: grey;
     width: 33%;
+    margin-top: 5px;
 }
 .project{
 	width: 100%;
     display: flex;
     padding-left: 0px;
     padding-right: 0px;
+    overflow: hidden;
 }
 .project>img, .has_no_image{
 	width: 100%;

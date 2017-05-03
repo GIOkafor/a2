@@ -1,0 +1,89 @@
+.row1{
+	display: inline-flex;
+	margin-top: 10px;
+}
+.img_and_title{
+	margin-right: 5px;
+}
+.project_image{
+	height: 150px;
+    width: 150px;
+}
+.admin_image{
+	height: 65px;
+	width: 65px;
+}
+.admin_name{
+	font-weight: bold;
+}
+.admin_description_header{
+	display: inline-flex;
+    width: 100%;
+}
+.admin_description{
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 5px;
+}
+.admin_info{
+	display: flex;
+    flex-direction: column;
+}
+.admin_description_header h5{
+	font-weight: bold;
+    margin: 0px;
+    border-bottom: 1.75px solid;
+    font-size: 15px;
+}
+.description_body{
+	font-size: 12px;
+}
+
+.photos{
+	display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-right: 5px;
+    margin-top: 10px;
+}
+img.project_photo{
+	width: 25%;
+    height: 75px;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.seeking_container{
+	margin-top: 40px;
+}
+.seeking_container>h5{
+	font-weight: bold;
+}
+.seeking{
+	display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.role{
+	font-weight: bold;
+}
+
+.project_timeline{
+	background-color: #c3eeff;
+	padding-left: 2.5px;
+	margin-bottom: 20px; 
+}
+.project_timeline>h5{
+	font-weight: bold;
+	margin-bottom: 5px;
+	padding-top: 2.5px;
+}
+.project_timeline .end_date{
+	color: #858d93;
+}
+
+.btn{
+	margin-bottom: 50px;
+}

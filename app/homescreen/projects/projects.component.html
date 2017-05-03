@@ -1,22 +1,5 @@
-<div class="section_title">
-	<img class="projects_icon" src="app/homescreen/img/briefcase-8x_w.png" alt="breifcase">
-	<ul class="nav nav-tabs">
-		<li role="presentation">
-			<a href="#">YOUR PROJECTS</a>
-		</li>
-		<li role="presentation">
-			<a href="#">ACTIVE PROJECTS</a>
-		</li>
-		<li role="presentation">
-			<a href="#">CREATE</a>
-		</li>
-	</ul>
-	
-	<img class="options_icon" src="app/homescreen/img/options_button8x.png" alt="options">
-</div>
-
 <div class="row project_list">
-	<div *ngFor="let project of projects; let i = index" class="project_container">
+	<div *ngFor="let project of projects; let i = index" class="project_container" [routerLink]="['project-details', project.id]">
 		<div class="clearfix" *ngIf="i % 3 == 0"></div>
 		<div class="col-md-4 project">
 			<img class="has_no_image" src="app/homescreen/projects/img/no_image_project.jpg">

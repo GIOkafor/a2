@@ -1,0 +1,62 @@
+<div *ngIf="project">
+	<div class="row1">
+		<div class="img_and_title">
+			<img class="project_image" src="app/homescreen/projects/img/sb_main.jpg">
+			<span *ngIf="project">{{project.title}}</span>
+		</div>
+
+		<div class="admin_and_description_container">
+			<div class="admin_description_header">
+				<img class="admin_image" src="app/homescreen/img/following/sanza-stark.jpg" />
+				
+				<div class="admin_description">
+					<div class="admin_info">
+						<span class="admin_name">{{project.project_admin}}</span>
+						<span class="p_admin">Project Admin</span>
+					</div>
+					
+
+					<h5>DESCRIPTION</h5>
+				</div>
+			</div>	
+			
+			<div class="description_body">
+				{{project.description}}
+			</div>
+		</div>
+	</div>
+
+	<div class="photos">
+		<img *ngFor="let photo of project.images" class="project_photo" src="app/homescreen/projects/img/{{photo}}">
+	</div>
+
+	<div class="seeking_container">
+		<h5>SEEKING</h5>
+		<div class="seeking_list">
+			<div class="seeking" *ngFor="let seeking of project.seeking">
+				<span class="role">{{seeking.role}}</span>
+				<span class="industry">{{seeking.industry}}</span>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="project_timeline">
+		<h5>PROJECT END DATE</h5>
+		<span class="end_date">{{project.project_end_date}}</span>
+	</div>
+
+	<button class="btn btn-success">JOIN</button>
+	<button class="btn btn-danger" (click)="goBack()">BACK</button>
+
+	<div class="project_members">
+		<div class="members_header">
+			<h5>PROJECT MEMBERS</h5>
+			<span class="members_count">({{project.project_members.length}})</span>
+		</div>
+
+		<div class="members_list">
+			<img class="member_image" *ngFor="let member of project.project_members">
+		</div>
+	</div>
+</div>

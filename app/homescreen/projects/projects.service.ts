@@ -17,6 +17,14 @@ export class ProjectsService {
 		return Promise.resolve(PROJECTS);
 	}
 
+	//gets project by id
+	getProject(id: number):Promise<Projects>{
+		//TODO: query db for project by id
+		//for now get all mock projects then check for the one with matching id
+		return this.getProjects()
+			.then(projects => projects.find(project => project.id === id));
+	}
+
 	//gets total activity count
 	getActivityCount(projectNotifications:Projects[]): number{
 		var activity_count = 0;
