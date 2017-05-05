@@ -13,6 +13,7 @@
 					<div class="admin_info">
 						<span class="admin_name">{{project.project_admin}}</span>
 						<span class="p_admin">Project Admin</span>
+						<a href="" *ngIf="isAdmin">Manage</a>
 					</div>
 					
 
@@ -46,8 +47,108 @@
 		<span class="end_date">{{project.project_end_date}}</span>
 	</div>
 
-	<button class="btn btn-success">JOIN</button>
-	<button class="btn btn-danger" (click)="goBack()">BACK</button>
+	<!-- TODO: Hide buttons if user isAdmin -->
+	<div class="buttons">
+		<button class="btn btn-success">JOIN</button>
+		<button class="btn btn-danger" (click)="goBack()">BACK</button>
+	</div>
+
+<!-- Pending request section start -->
+	<div class="pending_requests_section">
+		<div class="section_header">
+			<h5>PENDING REQUEST ({{project.new_member_request}} NEW)</h5><!--TODO: switch to project.new_member_request.length-->
+		</div>
+
+		<div class="pending_requests"><!-- *ngFor="let member of project.new_member_request" -->
+			<div class="request_container">
+				<img class="member_image" src="app/homescreen/img/user_temp_avatar.png" alt="member request image">
+				
+				<div class="action_buttons">
+					<span class="glyphicon glyphicon-ok"></span>
+					<span class="glyphicon glyphicon-remove-sign"></span>
+				</div>
+
+				<div class="pending_user_info">
+					<span>username</span>
+					<span>Industry</span>
+					<span>Job Title</span>
+				</div>	
+			</div>		
+		</div>
+
+		<a href="">View all requests</a>
+	</div>
+<!-- Pending request section end -->	
+
+<!-- Messages section start -->
+	<div class="messages_section">
+		<div class="section_header">
+			<h5>MESSAGES (msg_count)</h5>
+		</div>
+
+		<button class="btn btn-default black-btn">Compose</button>
+
+		<div class="message_list">
+			<div class="message_container"><!--  *ngFor="let message of project.messages" -->
+				<div class="image_div">
+					<img src="app/homescreen/img/user_temp_avatar.png"><!-- {{message.user.image}} -->
+					<span class="msg_count">1</span><!-- {{message.count}} -->
+				</div>
+
+				<div class="sender_info">
+					<span>Username</span><!-- {{message.count}} -->
+					<span>Industry</span>
+					<span>Role</span>
+
+					<span>Date received</span><!-- {{message.dateReceived}} -->
+				</div>
+
+				<div class="message">
+					Actual message from user
+				</div>
+				
+			</div>
+		</div>
+
+		<a href="">View all messages</a>
+	</div>
+<!-- Messages section end -->
+
+<!-- Workspace section start -->
+	<div class="workspace_section">
+		<div class="section_header">
+			<h5>WORKSPACE (workspace_count)</h5>
+		</div>
+
+		<div class="workspace_buttons">
+			<button class="btn btn-default black-btn">Add media</button>
+			<button class="btn btn-default black-btn">Add notes</button>
+		</div>
+		
+
+		<div class="added_list">
+			<div class="item"><!--  *ngFor="let item of project.workspace.recently_added" -->
+				<div class="image_div">
+					<img ng-class="mediaType" src="..." alt="..."><!-- use ngclass to specify media type -->
+				</div>
+
+				<div class="item_info">
+					<span>Filename: </span><!-- {{item.file_name}} -->
+					<span>File size: </span><!-- {{item.file_size}} -->
+					<span>Date: </span><!-- {{item.date_posted}} -->
+					<span>Uploaded by: </span><!-- {{item.uploaded_by}} -->
+				</div>
+
+				<div class="notes">
+					Additional notes from user
+				</div>
+				
+			</div>
+		</div>
+
+		<a href="">View all files/notes</a>
+	</div>
+<!-- Workspace section end -->
 
 	<div class="project_members">
 		<div class="members_header">
@@ -56,7 +157,57 @@
 		</div>
 
 		<div class="members_list">
-			<img class="member_image" *ngFor="let member of project.project_members">
+			<!-- TODO: Change image src to user image *ngIf="isAdmin" -->
+			<div class="member_container" *ngFor="let member of project.project_members; let i = index">
+				<img class="options" src="app/homescreen/img/options_button8x.png" (click)="showHiddenMenu(i)" *ngIf="isAdmin">
+				<img class="member_image" src="app/homescreen/img/user_temp_avatar.png">
+				<span class="username">{{member}}</span>
+				
+				<div class="hidden_menu" *ngIf="selectedMember == i">
+					<span data-toggle="modal" data-target="#messageModal">Message</span>
+					<span>View Profile</span>
+					<span>Remove</span>
+				
+					<!-- MODAL STUFF -->
+				
+					<!-- Modal -->
+						<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						        <h4 class="modal-title" id="messageModal">Compose</h4>
+						        <input type="text" class="form-control" placeholder="Subject" name="subject">
+
+						        <div class="user_info">
+						        	<img src="app/homescreen/img/user_temp_avatar.png" alt="user image">
+
+						        	<div>
+						        		<div class="user_info_text">
+							        		<span>{{member}}</span>
+							        		<span>Industry</span>
+							        		<span>Role</span>
+							        	</div>
+
+						        		<span>{{whatTime | date:'longDate'}}</span>
+						        	</div>
+						        </div>
+						      </div>
+						      <div class="modal-body">
+						        <textarea class="form-control" rows="3"></textarea>
+
+						        <div class="button_area">
+						        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						        	<button type="button" class="btn btn-primary">Send</button>
+						        </div>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </div>

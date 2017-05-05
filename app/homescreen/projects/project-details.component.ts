@@ -16,6 +16,9 @@ import {ProjectsService} from './projects.service';
 
 export class ProjectDetailsComponent implements OnInit{
 	@Input() project: Projects;
+	isAdmin: Boolean;
+	selectedMember: number;
+	whatTime: Date;
 
 	constructor(
 		private projectsService: ProjectsService,
@@ -24,6 +27,10 @@ export class ProjectDetailsComponent implements OnInit{
 	){}
 
 	ngOnInit():void{
+		//TODO: check for actual admin status
+		//for now set isAdmin to true
+		this.isAdmin = true;
+
 		this.route.params
 			.switchMap((params: Params) => this.projectsService.getProject(+params['id']))
 			.subscribe(project => this.project = project);
@@ -31,5 +38,15 @@ export class ProjectDetailsComponent implements OnInit{
 
 	goBack(){
 		this.location.back();
+	}
+
+	showHiddenMenu(i:number){
+		console.log("Current selected is: ", this.selectedMember);
+		if(this.selectedMember == i)
+			this.selectedMember = -1;
+		else
+			this.selectedMember = i;
+	
+		this.whatTime = new Date();
 	}
 }

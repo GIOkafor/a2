@@ -5,7 +5,7 @@ export class Projects{
 	constructor(
 		public id:number,
 		public title:string, 
-		public new_member_request:number, 
+		public new_member_request:number,//TODO: switch to User[]
 		public files_added:number, 
 		public new_notes:number, 
 		public project_start_date: string, 

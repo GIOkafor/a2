@@ -52,7 +52,7 @@ export const PROJECTS:Projects[] = [
 	{
 		id: 3,
 		title: 'Blue Mountain',
-		new_member_request: 0,
+		new_member_request: 5,//TODO: switch to User[]
 		files_added: 0,
 		new_notes: 0,
 		project_start_date: 'October 1st, 2011',
@@ -61,7 +61,7 @@ export const PROJECTS:Projects[] = [
 		is_favourited: false,
 		project_admin: 'Sanza Stark',
 		seeking: [{role: 'Manager', industry: 'Construction Industry'}, {role: 'Photographer', industry: 'Fashion/entertainent'},{role: 'Graphic designer', industry: 'Technology'}, {role: 'Manager', industry: 'Financial Industry'}],
-		project_members: [''],
+		project_members: ['Stacy Kuaman', 'Franko Columbo', 'Micheal Basquiat', 'Stacy Kuaman', 'Franko Columbo', 'Stacy Kuaman', 'Micheal Basquiat'],
 		images: ['sb_main.jpg', 'sb2.jpg', 'sb3.jpg', 'sb4.jpg', 'sb5.jpg'],
 		description: 'Disrupt polaroid ennui, slow-carb raclette literally iceland man bun flannel VHS poutine. VHS celiac hammock cliche, scenester sustainable man bun brunch banjo retro. Keffiyeh dreamcatcher readymade truffaut wolf. Hella fanny pack farm-to-table try-hard. DIY authentic hexagon, tousled small batch hoodie roof party live-edge. Authentic keytar retro pok pok selvage coloring book. Readymade cliche ennui keffiyeh, kinfolk tumeric crucifix hella craft beer shabby chic waistcoat synth pour-over shoreditch.'
 	}
